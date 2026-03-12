@@ -1,0 +1,161 @@
+@use '../../../styles' as *;
+
+.medien-section {
+  background-color: var(--bg-light);
+  padding: 10rem 0;
+}
+
+.medien-container {
+  @include container;
+  @include flex-col(8rem);
+}
+
+// Hero
+.medien-hero {
+  @include flex-col(2.4rem);
+  max-width: 72rem;
+}
+
+.medien-badge {
+  display: inline-block;
+  background-color: var(--accent-orange);
+  color: var(--text-light);
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50rem;
+  width: fit-content;
+}
+
+.medien-title {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+
+  .highlight {
+    color: var(--primary-blue);
+  }
+
+  @include respond(sm) {
+    font-size: 3.2rem;
+  }
+}
+
+.medien-description {
+  font-size: 1.7rem;
+  color: var(--text-grey);
+  line-height: 1.7;
+}
+
+// Cards
+.medien-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.medien-card {
+  background-color: var(--bg-white);
+  border-radius: 1.6rem;
+  padding: 3.2rem;
+  box-shadow: var(--shadow-md);
+  @include flex-col(1.6rem);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: var(--shadow-lg);
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: var(--text-grey);
+    line-height: 1.7;
+  }
+}
+
+.medien-icon-container {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 1.2rem;
+  background-color: var(--primary-blue);
+  @include flex-center;
+}
+
+// Zielgruppen
+.medien-zielgruppen {
+  @include flex-col(3.2rem);
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+}
+
+.zielgruppen-list {
+  display: flex;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+}
+
+.zielgruppe-item {
+  @include flex-center;
+  gap: 1.2rem;
+  background-color: var(--bg-white);
+  padding: 1.2rem 2.4rem;
+  border-radius: 50rem;
+  box-shadow: var(--shadow-sm);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+// CTA
+.medien-cta {
+  @include flex-center;
+  gap: 2.4rem;
+  background-color: var(--primary-blue);
+  padding: 4rem;
+  border-radius: 1.6rem;
+
+  p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-light);
+  }
+
+  @include respond(md) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.medien-cta-button {
+  @include button-base;
+  background-color: var(--accent-orange);
+  color: var(--text-light);
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--accent-orange-hover);
+    transform: translateY(-0.1rem);
+  }
+
+  &:active {
+    background-color: var(--accent-orange-active);
+  }
+}

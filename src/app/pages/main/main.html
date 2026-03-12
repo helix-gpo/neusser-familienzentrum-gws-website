@@ -1,0 +1,282 @@
+@if (showToast()) {
+  <div class="toast">
+    <app-icon [iconName]="'info'" [iconColor]="'#fff'" [iconSize]="'2rem'"></app-icon>
+    <p>Weitere Projekte sind bereits in Planung!</p>
+  </div>
+}
+
+<section class="hero-section" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-container">
+    <span class="hero-badge">Gemeinnützige Bildungseinrichtung</span>
+    <h1 class="hero-title">
+      Digitale Teilhabe.<br />
+      <span class="highlight">Kulturelle Bildung.</span><br />
+      Für alle Generationen.
+    </h1>
+    <p class="hero-description">
+      Medienkompetenz und kirchenmusikalische Bildung auf Basis christlicher Werte. Wir verbinden
+      digitale Innovation mit menschlicher Gemeinschaft.
+    </p>
+    <div class="hero-buttons">
+      <button class="btn-primary" (click)="scrollToElementByButton('contact')">Kurs finden</button>
+      <button class="btn-secondary" (click)="scrollToElementByButton('about')">
+        Mehr über uns
+      </button>
+    </div>
+    <div class="hero-values">
+      <span class="hero-value-item">
+        <app-icon [iconName]="'favorite'" [iconColor]="'#c47f17'" [iconSize]="'2rem'"></app-icon>
+        Gemeinnützig
+      </span>
+      <span class="hero-value-item">
+        <app-icon [iconName]="'groups'" [iconColor]="'#7eb8d4'" [iconSize]="'2rem'"></app-icon>
+        Alle Generationen
+      </span>
+      <span class="hero-value-item">
+        <app-icon [iconName]="'church'" [iconColor]="'#a78bfa'" [iconSize]="'2rem'"></app-icon>
+        Christliche Werte
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT US -->
+<section class="about-section" id="about">
+  <div class="about-container">
+    <div class="about-text">
+      <p class="about-overhead">ÜBER UNS</p>
+      <h2 class="about-title">Gemeinsam für alle Generationen</h2>
+      <p class="about-description">
+        Das <strong>Neusser Familienzentrum GWS gGmbH</strong> ist eine gemeinnützige
+        Tochtergesellschaft der Geschwister-Weiß-Stiftung. Unser Ziel ist es, Menschen aller
+        Generationen zu verbinden.
+      </p>
+      <p class="about-description">
+        Wir glauben an ein christliches Menschenbild, das die Würde jedes einzelnen Menschen achtet
+        und Gemeinschaft fördert. Bei uns steht nicht die Gewinnerzielung im Vordergrund, sondern
+        das gemeinsame Lernen und Wachsen.
+      </p>
+      <button class="about-link" (click)="scrollToElementByButton('angebote')">
+        Mehr über uns erfahren
+        <app-icon
+          [iconName]="'arrow_right_alt'"
+          [iconColor]="'#2d4a6b'"
+          [iconSize]="'2.4rem'"
+        ></app-icon>
+      </button>
+    </div>
+    <div class="about-picture">
+      <img class="about-image" src="/images/about-us.png" alt="Neusser Familienzentrum GWS" />
+      <div class="about-badge">
+        <p class="badge-number">100%</p>
+        <p class="badge-text">Gemeinnützig</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANGEBOTE -->
+<section class="angebote-section" id="angebote">
+  <div class="angebote-container">
+    <p class="angebote-overhead">UNSERE SCHWERPUNKTE</p>
+    <h2 class="angebote-title">Das bieten wir Ihnen</h2>
+    <p class="angebote-subtitle">
+      Wir bieten vielfältige Bildungs- und Kulturangebote für Jung und Alt. Entdecken Sie unsere
+      drei Kernbereiche.
+    </p>
+    <div class="angebote-cards">
+      <div class="angebote-card" (click)="routing('medien')">
+        <div class="angebote-card-image">
+          <img src="/images/medienbildung.png" alt="Medienbildung" />
+        </div>
+        <div class="angebote-card-body">
+          <span class="angebote-icon-container blue">
+            <app-icon [iconName]="'computer'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+          </span>
+          <h3 class="angebote-card-title">Medienbildung</h3>
+          <p class="angebote-card-description">
+            Workshops für Kinder und Jugendliche zu Cybermobbing, Fake News erkennen und
+            Video-Produktion. Wir stärken junge Menschen im Umgang mit digitalen Medien.
+          </p>
+          <button class="angebote-card-link">
+            Mehr erfahren
+            <app-icon
+              [iconName]="'arrow_right_alt'"
+              [iconColor]="'#2d4a6b'"
+              [iconSize]="'2rem'"
+            ></app-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="angebote-card" (click)="routing('digital')">
+        <div class="angebote-card-image">
+          <img src="/images/digital.png" alt="Digitale Teilhabe" />
+        </div>
+        <div class="angebote-card-body">
+          <span class="angebote-icon-container green">
+            <app-icon
+              [iconName]="'smartphone'"
+              [iconColor]="'#fff'"
+              [iconSize]="'2.4rem'"
+            ></app-icon>
+          </span>
+          <h3 class="angebote-card-title">Digitale Teilhabe</h3>
+          <p class="angebote-card-description">
+            Smartphone- und Internetkurse speziell für Senioren. Wir helfen älteren Menschen, sicher
+            und selbstbestimmt die digitale Welt zu nutzen.
+          </p>
+          <button class="angebote-card-link">
+            Mehr erfahren
+            <app-icon
+              [iconName]="'arrow_right_alt'"
+              [iconColor]="'#2d4a6b'"
+              [iconSize]="'2rem'"
+            ></app-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="angebote-card" (click)="routing('musik')">
+        <div class="angebote-card-image">
+          <img src="/images/music.png" alt="Kirchenmusik" />
+        </div>
+        <div class="angebote-card-body">
+          <span class="angebote-icon-container orange">
+            <app-icon
+              [iconName]="'music_note'"
+              [iconColor]="'#fff'"
+              [iconSize]="'2.4rem'"
+            ></app-icon>
+          </span>
+          <h3 class="angebote-card-title">Kirchenmusik</h3>
+          <p class="angebote-card-description">
+            Chöre, Konzerte und musikalische Bildung. Der Sankt-Andreas-Chor und weitere Ensembles
+            bereichern unser kulturelles Leben und stiften Gemeinschaft.
+          </p>
+          <button class="angebote-card-link">
+            Mehr erfahren
+            <app-icon
+              [iconName]="'arrow_right_alt'"
+              [iconColor]="'#2d4a6b'"
+              [iconSize]="'2rem'"
+            ></app-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJEKTE -->
+<section class="projekte-section" id="projekte">
+  <div class="projekte-container">
+    <p class="projekte-overhead">AKTUELLES</p>
+    <h2 class="projekte-title">Unsere Projekte</h2>
+    <p class="projekte-subtitle">
+      Dank unserer Förderer können wir regelmäßig neue Projekte realisieren und unsere Angebote
+      erweitern.
+    </p>
+    <div class="projekte-cards">
+      <div class="projekte-card">
+        <div class="projekte-card-left">
+          <span class="projekte-icon-container orange">
+            <app-icon [iconName]="'piano'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+          </span>
+          <span class="projekte-badge neu">Neu</span>
+        </div>
+        <div class="projekte-card-body">
+          <h3 class="projekte-card-title">Neues E-Piano für den Sankt-Andreas-Chor</h3>
+          <p class="projekte-card-description">
+            Mit Unterstützung unserer Förderer konnte ein neues E-Piano angeschafft werden, das die
+            Proben und Auftritte des Chors bereichert.
+          </p>
+        </div>
+      </div>
+
+      <div class="projekte-card">
+        <div class="projekte-card-left">
+          <span class="projekte-icon-container blue">
+            <app-icon
+              [iconName]="'calendar_month'"
+              [iconColor]="'#fff'"
+              [iconSize]="'2.4rem'"
+            ></app-icon>
+          </span>
+          <span class="projekte-badge demnachst">Demnächst</span>
+        </div>
+        <div class="projekte-card-body">
+          <h3 class="projekte-card-title">Neujahrskonzert 2026</h3>
+          <p class="projekte-card-description">
+            Das traditionelle Neujahrskonzert bringt auch 2026 Musikbegeisterte zusammen. Freuen Sie
+            sich auf ein abwechslungsreiches Programm.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="projekte-button" (click)="handleProjekteClick()">
+      Alle Projekte ansehen
+      <app-icon
+        [iconName]="'arrow_right_alt'"
+        [iconColor]="'#fff'"
+        [iconSize]="'2.4rem'"
+      ></app-icon>
+    </button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+    <div class="contact-card">
+      <div class="contact-left">
+        <h2 class="contact-title">Haben Sie Fragen?<br />Wir beraten Sie gerne.</h2>
+        <p class="contact-description">
+          Ob Sie sich für einen Kurs interessieren, mehr über unsere Angebote erfahren möchten oder
+          einfach nur fragen haben - wir freuen uns auf Ihre Kontaktaufnahme.
+        </p>
+        <ul class="contact-info-list">
+          <li>
+            <span class="contact-info-icon">
+              <app-icon
+                [iconName]="'location_on'"
+                [iconColor]="'#fff'"
+                [iconSize]="'2rem'"
+              ></app-icon>
+            </span>
+            <span>Neuss, Deutschland</span>
+          </li>
+          <li>
+            <span class="contact-info-icon">
+              <app-icon [iconName]="'mail'" [iconColor]="'#fff'" [iconSize]="'2rem'"></app-icon>
+            </span>
+            <span>Kontakt per E-Mail</span>
+          </li>
+          <li>
+            <span class="contact-info-icon">
+              <app-icon
+                [iconName]="'phone_in_talk'"
+                [iconColor]="'#fff'"
+                [iconSize]="'2rem'"
+              ></app-icon>
+            </span>
+            <span>Telefonische Beratung</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contact-right">
+        <button class="contact-cta-button" (click)="handleContactClick()">
+          Kontaktieren Sie uns
+          <app-icon
+            [iconName]="'arrow_right_alt'"
+            [iconColor]="'#fff'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+        </button>
+        <p class="contact-response-time">Wir antworten innerhalb von 24 Stunden</p>
+      </div>
+    </div>
+  </div>
+</section>

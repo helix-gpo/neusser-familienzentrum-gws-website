@@ -1,0 +1,103 @@
+<section class="medien-section" id="penis">
+  <div class="medien-container">
+    <div class="medien-hero">
+      <span class="medien-badge">Medienbildung</span>
+      <h1 class="medien-title">
+        Starke Medien -<br /><span class="highlight">Starke Kinder & Jugendliche</span>
+      </h1>
+      <p class="medien-description">
+        Medienkompetenz ist eine Schlüsselkompetenz unserer Zeit. Wir begleiten Kinder und
+        Jugendliche dabei, digitale Medien kritisch, sicher und kreativ zu nutzen.
+      </p>
+    </div>
+
+    <div class="medien-grid">
+      <div class="medien-card">
+        <span class="medien-icon-container">
+          <app-icon
+            [iconName]="'shield_person'"
+            [iconColor]="'#fff'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+        </span>
+        <h3>Cybermobbing erkennen & handeln</h3>
+        <p>
+          Wir sensibilisieren Jugendliche für digitale Gewalt und zeigen konkrete
+          Handlungsmöglichkeiten auf.
+        </p>
+      </div>
+      <div class="medien-card">
+        <span class="medien-icon-container">
+          <app-icon [iconName]="'fact_check'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>Fake News durchschauen</h3>
+        <p>
+          Kritisches Denken stärken — Desinformation erkennen und verantwortungsvoll damit umgehen.
+        </p>
+      </div>
+      <div class="medien-card">
+        <span class="medien-icon-container">
+          <app-icon
+            [iconName]="'bubble_chart'"
+            [iconColor]="'#fff'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+        </span>
+        <h3>Algorithmen & Filterblasen</h3>
+        <p>
+          Wie entstehen Filterblasen? Wir machen unsichtbare Mechanismen digitaler Plattformen
+          sichtbar.
+        </p>
+      </div>
+      <div class="medien-card">
+        <span class="medien-icon-container">
+          <app-icon [iconName]="'videocam'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>Reels & Videos produzieren</h3>
+        <p>Kreative Medienproduktion als Ausdrucksmittel — von der Idee bis zum fertigen Video.</p>
+      </div>
+    </div>
+
+    <div class="medien-zielgruppen">
+      <h2>Für wen?</h2>
+      <div class="zielgruppen-list">
+        <div class="zielgruppe-item">
+          <app-icon [iconName]="'school'" [iconColor]="'#2d4a6b'" [iconSize]="'2.4rem'"></app-icon>
+          <p>Schulen</p>
+        </div>
+        <div class="zielgruppe-item">
+          <app-icon [iconName]="'groups'" [iconColor]="'#2d4a6b'" [iconSize]="'2.4rem'"></app-icon>
+          <p>Jugendzentren</p>
+        </div>
+        <div class="zielgruppe-item">
+          <app-icon
+            [iconName]="'diversity_3'"
+            [iconColor]="'#2d4a6b'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+          <p>Jugendarbeit</p>
+        </div>
+        <div class="zielgruppe-item">
+          <app-icon
+            [iconName]="'child_care'"
+            [iconColor]="'#2d4a6b'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+          <p>9 – 16 Jahre</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="medien-cta">
+      <p>Interesse an einem Workshop?</p>
+      <button class="medien-cta-button" (click)="handleContactClick()">
+        Jetzt Kontakt aufnehmen
+        <app-icon
+          [iconName]="'arrow_right_alt'"
+          [iconColor]="'#fff'"
+          [iconSize]="'2.4rem'"
+        ></app-icon>
+      </button>
+    </div>
+  </div>
+</section>
