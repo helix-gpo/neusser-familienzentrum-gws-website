@@ -5,39 +5,6 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
-html {
-  height: 100%;
-  scroll-behavior: auto;
-  @include mat.theme(
-    (
-      color: (
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
-      ),
-      typography: Roboto,
-      density: 0,
-    )
-  );
-}
-
-body {
-  // Default the application to a light color theme. This can be changed to
-  // `dark` to enable the dark color theme, or to `light dark` to defer to the
-  // user's system settings.
-  color-scheme: light;
-
-  // Set a default background, font and text colors for the application using
-  // Angular Material's system-level CSS variables. Learn more about these
-  // variables at https://material.angular.dev/guide/system-variables
-  background-color: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
-  font: var(--mat-sys-body-medium);
-
-  // Reset the user agent margin.
-  margin: 0;
-  height: 100%;
-  scroll-behavior: auto;
-}
 /*
 --- 01 TYPOGRAPHY ---
 Font sizes (px): 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74
@@ -134,8 +101,21 @@ Background Light: #eef1f5
 }
 
 html {
+  height: 100%;
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: auto;
+
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
 
   @include respond(xl) {
     font-size: 56.25%;
@@ -149,11 +129,16 @@ html {
 }
 
 body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
   font-family: 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: var(--text-dark);
+  margin: 0;
+  height: 100%;
   overflow-x: hidden;
+  scroll-behavior: auto;
 }
 
 .grid > * {

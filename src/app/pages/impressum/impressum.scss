@@ -1,0 +1,223 @@
+@use '../../../styles' as *;
+
+.impressum-section {
+  background-color: var(--bg-light);
+  padding: 10rem 0;
+}
+
+.impressum-container {
+  @include container;
+  @include flex-col(8rem);
+}
+
+// Hero
+.impressum-hero {
+  @include flex-col(2rem);
+}
+
+.impressum-badge {
+  display: inline-block;
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50rem;
+  width: fit-content;
+}
+
+.impressum-title {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+
+  @include respond(sm) {
+    font-size: 3.2rem;
+  }
+}
+
+// Grid
+.impressum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.impressum-block {
+  background-color: var(--bg-white);
+  border-radius: 1.6rem;
+  padding: 3.2rem;
+  box-shadow: var(--shadow-md);
+  @include flex-col(1.6rem);
+
+  &.full-width {
+    grid-column: 1 / -1;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    padding-bottom: 1.6rem;
+    border-bottom: 2px solid var(--bg-light);
+  }
+}
+
+.impressum-content {
+  @include flex-col(0.8rem);
+
+  p {
+    font-size: 1.5rem;
+    color: var(--text-grey);
+    line-height: 1.7;
+  }
+}
+
+.impressum-leitgedanke {
+  font-size: 1.7rem !important;
+  font-weight: 600 !important;
+  color: var(--primary-blue) !important;
+  font-style: italic;
+}
+
+.impressum-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  a {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--primary-blue-hover);
+      text-decoration: underline;
+    }
+  }
+}
+
+.impressum-kernbereiche {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.kernbereich-item {
+  @include flex-center;
+  gap: 0.8rem;
+  background-color: var(--bg-light);
+  padding: 0.8rem 1.6rem;
+  border-radius: 50rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+// Spenden
+.impressum-spenden {
+  background-color: var(--bg-white);
+  border-radius: 1.6rem;
+  padding: 4.8rem;
+  box-shadow: var(--shadow-md);
+  @include flex-col(3.2rem);
+
+  @include respond(sm) {
+    padding: 3.2rem 2.4rem;
+  }
+}
+
+.spenden-header {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+}
+
+.spenden-intro {
+  font-size: 1.6rem;
+  color: var(--text-grey);
+  line-height: 1.7;
+  max-width: 72rem;
+}
+
+.spenden-konto {
+  @include flex-col(2rem);
+  background-color: var(--bg-light);
+  border-radius: 1.2rem;
+  padding: 3.2rem;
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+}
+
+.spenden-konto-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+
+  @include respond(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.spenden-konto-item {
+  @include flex-col(0.4rem);
+}
+
+.spenden-konto-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.spenden-konto-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+
+  &.iban {
+    font-family: monospace;
+    font-size: 1.6rem;
+    color: var(--primary-blue);
+    letter-spacing: 0.05em;
+  }
+}
+
+.spenden-hinweise {
+  @include flex-col(1.6rem);
+}
+
+.spenden-hinweis-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  font-size: 1.5rem;
+  color: var(--text-grey);
+  line-height: 1.6;
+}
+
+.spenden-dankeschoen {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent-orange);
+  text-align: center;
+  padding-top: 1.6rem;
+  border-top: 2px solid var(--bg-light);
+}

@@ -1,1 +1,120 @@
-<p>digital works!</p>
+<section class="digital-section">
+  <div class="digital-container">
+    <div class="digital-hero">
+      <span class="digital-badge">Digitale Teilhabe</span>
+      <h1 class="digital-title">
+        Online für Alt –<br /><span class="highlight">Digital dabei im Alltag</span>
+      </h1>
+      <p class="digital-description">
+        Wir begleiten Seniorinnen und Senioren Schritt für Schritt in die digitale Welt —
+        verständlich, geduldig und praxisnah.
+      </p>
+    </div>
+
+    <div class="digital-grid">
+      <div class="digital-card">
+        <span class="digital-icon-container">
+          <app-icon [iconName]="'smartphone'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>Smartphone, Tablet & PC</h3>
+        <p>
+          Grundlagen im Umgang mit modernen Geräten — von der ersten Einrichtung bis zur täglichen
+          Nutzung.
+        </p>
+      </div>
+      <div class="digital-card">
+        <span class="digital-icon-container">
+          <app-icon [iconName]="'chat'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>WhatsApp & Videotelefonie</h3>
+        <p>Mit Familie und Freunden in Kontakt bleiben — unkompliziert und sicher.</p>
+      </div>
+      <div class="digital-card">
+        <span class="digital-icon-container">
+          <app-icon [iconName]="'security'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>Sicherheit im Netz</h3>
+        <p>
+          Schutz vor Betrug, Phishing und unseriösen Angeboten — wir zeigen wie man sich sicher
+          bewegt.
+        </p>
+      </div>
+      <div class="digital-card">
+        <span class="digital-icon-container">
+          <app-icon [iconName]="'apps'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>Alltags-Apps & Behördenservices</h3>
+        <p>Online-Banking, Arzttermine, Behördengänge — digital erledigt, ohne Stress.</p>
+      </div>
+    </div>
+
+    <div class="digital-methoden">
+      <h2>Wie wir arbeiten</h2>
+      <div class="methoden-list">
+        <div class="methoden-item">
+          <app-icon [iconName]="'groups'" [iconColor]="'#2d4a6b'" [iconSize]="'2.8rem'"></app-icon>
+          <div>
+            <h4>Kleingruppenarbeit</h4>
+            <p>Maximal 6 Personen — damit jeder die Aufmerksamkeit bekommt, die er braucht.</p>
+          </div>
+        </div>
+        <div class="methoden-item">
+          <app-icon [iconName]="'replay'" [iconColor]="'#2d4a6b'" [iconSize]="'2.8rem'"></app-icon>
+          <div>
+            <h4>Wiederholung & Geduld</h4>
+            <p>Kein Zeitdruck — wir üben so oft wie nötig, bis es sitzt.</p>
+          </div>
+        </div>
+        <div class="methoden-item">
+          <app-icon [iconName]="'person'" [iconColor]="'#2d4a6b'" [iconSize]="'2.8rem'"></app-icon>
+          <div>
+            <h4>Individuelle Begleitung</h4>
+            <p>Eigene Geräte mitbringen — wir helfen direkt mit dem was Sie nutzen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="digital-zielgruppen">
+      <h2>Für wen?</h2>
+      <div class="zielgruppen-list">
+        <div class="zielgruppe-item">
+          <app-icon [iconName]="'elderly'" [iconColor]="'#2d4a6b'" [iconSize]="'2.4rem'"></app-icon>
+          <p>Seniorinnen & Senioren</p>
+        </div>
+        <div class="zielgruppe-item">
+          <app-icon
+            [iconName]="'home_work'"
+            [iconColor]="'#2d4a6b'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+          <p>Seniorentreffs</p>
+        </div>
+        <div class="zielgruppe-item">
+          <app-icon [iconName]="'church'" [iconColor]="'#2d4a6b'" [iconSize]="'2.4rem'"></app-icon>
+          <p>Kirchengemeinden</p>
+        </div>
+        <div class="zielgruppe-item">
+          <app-icon
+            [iconName]="'local_hospital'"
+            [iconColor]="'#2d4a6b'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+          <p>Altenheime</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="digital-cta">
+      <p>Interesse an einem Kurs?</p>
+      <button class="digital-cta-button" (click)="handleContactClick()">
+        Jetzt Kontakt aufnehmen
+        <app-icon
+          [iconName]="'arrow_right_alt'"
+          [iconColor]="'#fff'"
+          [iconSize]="'2.4rem'"
+        ></app-icon>
+      </button>
+    </div>
+  </div>
+</section>

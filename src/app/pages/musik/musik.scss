@@ -1,0 +1,219 @@
+@use '../../../styles' as *;
+
+.musik-section {
+  background-color: var(--bg-light);
+  padding: 10rem 0;
+}
+
+.musik-container {
+  @include container;
+  @include flex-col(8rem);
+}
+
+// Hero
+.musik-hero {
+  @include flex-col(2.4rem);
+  max-width: 72rem;
+}
+
+.musik-badge {
+  display: inline-block;
+  background-color: var(--accent-orange);
+  color: var(--text-light);
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50rem;
+  width: fit-content;
+}
+
+.musik-title {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.15;
+
+  .highlight {
+    color: var(--primary-blue);
+  }
+
+  @include respond(sm) {
+    font-size: 3.2rem;
+  }
+}
+
+.musik-description {
+  font-size: 1.7rem;
+  color: var(--text-grey);
+  line-height: 1.7;
+}
+
+// Cards
+.musik-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.musik-card {
+  background-color: var(--bg-white);
+  border-radius: 1.6rem;
+  padding: 3.2rem;
+  box-shadow: var(--shadow-md);
+  @include flex-col(1.6rem);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: var(--shadow-lg);
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: var(--text-grey);
+    line-height: 1.7;
+  }
+}
+
+.musik-icon-container {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 1.2rem;
+  background-color: var(--accent-orange);
+  @include flex-center;
+}
+
+// Projekte
+.musik-projekte {
+  @include flex-col(3.2rem);
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+}
+
+.projekte-list {
+  @include flex-col(2.4rem);
+}
+
+.musik-projekt-card {
+  background-color: var(--bg-white);
+  border-radius: 1.6rem;
+  padding: 2.8rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: var(--shadow-lg);
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: var(--text-grey);
+    line-height: 1.7;
+  }
+}
+
+.musik-projekt-left {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.musik-projekt-icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  min-width: 4.8rem;
+  border-radius: 1.2rem;
+  background-color: var(--accent-orange);
+  @include flex-center;
+}
+
+.musik-projekt-badge {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.4rem 1.2rem;
+  border-radius: 50rem;
+
+  &.neu {
+    background-color: rgba(196, 127, 23, 0.15);
+    color: var(--accent-orange);
+  }
+
+  &.abgeschlossen {
+    background-color: rgba(45, 74, 107, 0.12);
+    color: var(--primary-blue);
+  }
+
+  &.stiftung {
+    background-color: rgba(126, 184, 212, 0.2);
+    color: #5b8db8;
+  }
+}
+
+.musik-projekt-body {
+  @include flex-col(0.8rem);
+}
+
+// CTA
+.musik-cta {
+  @include flex-center;
+  gap: 2.4rem;
+  background-color: var(--bg-dark);
+  padding: 4rem;
+  border-radius: 1.6rem;
+
+  p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-light);
+  }
+
+  @include respond(md) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.musik-cta-button {
+  @include button-base;
+  background-color: var(--accent-orange);
+  color: var(--text-light);
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--accent-orange-hover);
+    transform: translateY(-0.1rem);
+  }
+
+  &:active {
+    background-color: var(--accent-orange-active);
+  }
+}

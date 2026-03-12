@@ -179,6 +179,16 @@
   }
 }
 
+.footer-contact-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--text-light);
+  }
+}
+
 .footer-contact-list {
   list-style: none;
   @include flex-col(1.2rem);

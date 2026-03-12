@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { Icon } from '../../util/icon/icon';
 
 @Component({
   selector: 'app-musik',
-  imports: [],
+  imports: [Icon],
   templateUrl: './musik.html',
   styleUrl: './musik.scss',
 })
-export class Musik {}
+export class Musik {
+  handleContactClick() {
+    window.location.href = 'mailto:info@neusser-familienzentrum.de'; // todo: email changen!
+  }
+}

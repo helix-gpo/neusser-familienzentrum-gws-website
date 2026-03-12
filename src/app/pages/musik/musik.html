@@ -1,1 +1,136 @@
-<p>musik works!</p>
+<section class="musik-section">
+  <div class="musik-container">
+    <div class="musik-hero">
+      <span class="musik-badge">Kirchenmusik</span>
+      <h1 class="musik-title">
+        Kirchenmusik erleben –<br /><span class="highlight">Gemeinschaft gestalten</span>
+      </h1>
+      <p class="musik-description">
+        Kirchenmusik verbindet Generationen, schafft Gemeinschaft und macht spirituelle Erfahrungen
+        erlebbar. Wir fördern musikalische Bildung und unterstützen kirchenmusikalische Arbeit in
+        unserer Region.
+      </p>
+    </div>
+
+    <div class="musik-grid">
+      <div class="musik-card">
+        <span class="musik-icon-container">
+          <app-icon
+            [iconName]="'queue_music'"
+            [iconColor]="'#fff'"
+            [iconSize]="'2.4rem'"
+          ></app-icon>
+        </span>
+        <h3>Kinder-, Jugend- & Erwachsenenchöre</h3>
+        <p>
+          Musikalische Gemeinschaft für alle Altersgruppen — vom ersten Ton bis zum großen Auftritt.
+        </p>
+      </div>
+      <div class="musik-card">
+        <span class="musik-icon-container">
+          <app-icon [iconName]="'church'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>Gottesdienst- & Konzertgestaltung</h3>
+        <p>
+          Musik als Ausdruck von Glauben und Tradition — wir gestalten Gottesdienste und Konzerte
+          mit.
+        </p>
+      </div>
+      <div class="musik-card">
+        <span class="musik-icon-container">
+          <app-icon [iconName]="'school'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>Workshops & Projektarbeit</h3>
+        <p>
+          Praktische Musikbildung in Kooperation mit Schulen und Musikschulen — kreativ und
+          generationenübergreifend.
+        </p>
+      </div>
+      <div class="musik-card">
+        <span class="musik-icon-container">
+          <app-icon [iconName]="'groups'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+        </span>
+        <h3>Nachwuchsförderung</h3>
+        <p>
+          Junge Menschen für Kirchenmusik begeistern und langfristig für die Gemeinschaft gewinnen.
+        </p>
+      </div>
+    </div>
+
+    <div class="musik-projekte">
+      <h2>Projekte, die wir unterstützen</h2>
+      <div class="projekte-list">
+        <div class="musik-projekt-card">
+          <div class="musik-projekt-left">
+            <span class="musik-projekt-icon">
+              <app-icon [iconName]="'piano'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+            </span>
+            <span class="musik-projekt-badge neu">Neu</span>
+          </div>
+          <div class="musik-projekt-body">
+            <h3>Neues E-Piano für den Sankt-Andreas-Chor „Lichtblicke"</h3>
+            <p>
+              Für die musikalische Begleitung des Sankt-Andreas-Chors wurde ein neues E-Piano
+              angeschafft. Die Finanzierung übernimmt das Neusser Familienzentrum GWS gGmbH und
+              stärkt damit nachhaltig die Kirchenmusik in unserer Gemeinde.
+            </p>
+          </div>
+        </div>
+
+        <div class="musik-projekt-card">
+          <div class="musik-projekt-left">
+            <span class="musik-projekt-icon">
+              <app-icon
+                [iconName]="'celebration'"
+                [iconColor]="'#fff'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+            </span>
+            <span class="musik-projekt-badge abgeschlossen">Abgeschlossen</span>
+          </div>
+          <div class="musik-projekt-body">
+            <h3>Neujahrskonzert am 01.02.2026</h3>
+            <p>
+              Das Neujahrskonzert 2026 wurde durch das Neusser Familienzentrum GWS gGmbH unterstützt
+              — sowohl die Finanzierung des Bläserensembles als auch die Bereitstellung der
+              Konzertplakate.
+            </p>
+          </div>
+        </div>
+
+        <div class="musik-projekt-card">
+          <div class="musik-projekt-left">
+            <span class="musik-projekt-icon">
+              <app-icon
+                [iconName]="'volunteer_activism'"
+                [iconColor]="'#fff'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+            </span>
+            <span class="musik-projekt-badge stiftung">Stiftung</span>
+          </div>
+          <div class="musik-projekt-body">
+            <h3>Weitere Förderungen über die Geschwister-Weiß-Stiftung</h3>
+            <p>
+              Darüber hinaus erfolgen weitere Förderungen der kirchlichen Arbeit über die
+              Geschwister-Weiß-Stiftung. Weitere Informationen finden Sie auf der Homepage der
+              Stiftung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="musik-cta">
+      <p>Interesse an unserer Chorarbeit?</p>
+      <button class="musik-cta-button" (click)="handleContactClick()">
+        Jetzt Kontakt aufnehmen
+        <app-icon
+          [iconName]="'arrow_right_alt'"
+          [iconColor]="'#fff'"
+          [iconSize]="'2.4rem'"
+        ></app-icon>
+      </button>
+    </div>
+  </div>
+</section>

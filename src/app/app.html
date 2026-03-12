@@ -23,6 +23,14 @@
               </button>
             </li>
             <li>
+              <button class="main-nav-link-button" (click)="routing('impressum')">Impressum</button>
+            </li>
+            <li>
+              <button class="main-nav-link-button" (click)="routing('datenschutz')">
+                Datenschutz
+              </button>
+            </li>
+            <li>
               <button
                 class="main-nav-link-button cta-link"
                 (click)="scrollToElementByButton('contact')"
@@ -63,6 +71,8 @@
           <li (click)="scrollToElementByButton('about')">Über uns</li>
           <li (click)="scrollToElementByButton('angebote')">Schwerpunkte</li>
           <li (click)="scrollToElementByButton('projekte')">Projekte</li>
+          <li (click)="routing('impressum')">Impressum</li>
+          <li (click)="routing('datenschutz')">Datenschutz</li>
           <li (click)="scrollToElementByButton('contact')">Kontakt</li>
         </ul>
       </div>
@@ -70,8 +80,32 @@
       <div class="footer-col">
         <p class="footer-col-title">Kontakt</p>
         <ul class="footer-contact-list">
-          <li>Neuss, Deutschland</li>
-          <li>E-Mail senden</li>
+          <li>
+            <a
+              href="https://maps.google.com/?q=Norfer+Kirchstraße+39,+41469+Neuss"
+              target="_blank"
+              class="footer-contact-link"
+            >
+              Norfer Kirchstraße 39
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://maps.google.com/?q=Norfer+Kirchstraße+39,+41469+Neuss"
+              target="_blank"
+              class="footer-contact-link"
+            >
+              41469 Neuss, Deutschland
+            </a>
+          </li>
+          <li>
+            <a href="tel:+4921379282040" class="footer-contact-link">02137 9282040</a>
+          </li>
+          <li>
+            <a href="mailto:info@neusser-familienzentrum.de" class="footer-contact-link">
+              info&#64;neusser-familienzentrum.de
+            </a>
+          </li>
         </ul>
         <div class="footer-stiftung-link" (click)="handleStiftungLinkClick()">
           <app-icon

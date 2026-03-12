@@ -34,7 +34,7 @@ export class Main {
 
   routing(url: string) {
     this.router.navigate([url]).then(() => {
-      this.scrollToElement('header');
+      document.body.scrollTo(0, 0);
     });
   }
 

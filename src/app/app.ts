@@ -22,7 +22,8 @@ export class App {
     const currentUrl = this.router.url;
     if (currentUrl !== '/') {
       this.router.navigate(['/']).then(() => {
-        setTimeout(() => this.scrollToElement(elementId), 100);
+        //setTimeout(() => this.scrollToElement(elementId), 100);
+        this.scrollToElement(elementId);
       });
     } else {
       this.scrollToElement(elementId);
