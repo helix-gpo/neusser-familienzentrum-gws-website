@@ -216,6 +216,7 @@
         </div>
       </div>
     </div>
+
     <button class="projekte-button" (click)="handleProjekteClick()">
       Alle Projekte ansehen
       <app-icon
@@ -224,6 +225,14 @@
         [iconSize]="'2.4rem'"
       ></app-icon>
     </button>
+
+    <div class="projekte-stiftung">
+      <app-icon [iconName]="'open_in_new'" [iconColor]="'#c47f17'" [iconSize]="'1.8rem'"></app-icon>
+      <span>Weitere Förderungen über die <strong>Geschwister-Weiß-Stiftung</strong></span>
+      <a class="projekte-stiftung-link" (click)="handleStiftungLinkClick()"
+        >zur Homepage der Stiftung</a
+      >
+    </div>
   </div>
 </section>
 

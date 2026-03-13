@@ -48,4 +48,8 @@ export class Main {
   handleContactClick() {
     window.location.href = 'mailto:gws.familienzentrum@yahoo.com';
   }
+
+  handleStiftungLinkClick() {
+    window.open('https://gwstiftung.de/', '_blank');
+  }
 }
