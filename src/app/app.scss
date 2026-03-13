@@ -164,6 +164,24 @@
   margin-bottom: 2rem;
 }
 
+.footer-col-title--spaced {
+  margin-top: 3.2rem;
+}
+
+.footer-doc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--text-light);
+  }
+}
+
 .footer-nav {
   list-style: none;
   @include flex-col(1.2rem);

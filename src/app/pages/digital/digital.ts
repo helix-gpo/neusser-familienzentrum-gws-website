@@ -9,6 +9,6 @@ import { Icon } from '../../util/icon/icon';
 })
 export class Digital {
   handleContactClick() {
-    window.location.href = 'mailto:info@neusser-familienzentrum.de'; // todo: email changen!
+    window.location.href = 'mailto:gws.familienzentrum@yahoo.com';
   }
 }
