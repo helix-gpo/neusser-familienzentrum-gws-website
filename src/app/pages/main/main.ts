@@ -13,6 +13,7 @@ export class Main {
   private router: Router = inject(Router);
 
   showToast = signal(false);
+  showAllProjekte = signal(false);
 
   scrollToElementByButton(elementId: string) {
     const currentUrl = this.router.url;
@@ -39,10 +40,7 @@ export class Main {
   }
 
   handleProjekteClick() {
-    this.showToast.set(true);
-    setTimeout(() => {
-      this.showToast.set(false);
-    }, 3500);
+    this.showAllProjekte.set(!this.showAllProjekte());
   }
 
   handleContactClick() {

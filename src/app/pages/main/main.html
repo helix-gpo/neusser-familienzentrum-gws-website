@@ -194,15 +194,22 @@
       <div class="projekte-card">
         <div class="projekte-card-left">
           <span class="projekte-icon-container orange">
-            <app-icon [iconName]="'piano'" [iconColor]="'#fff'" [iconSize]="'2.4rem'"></app-icon>
+            <app-icon
+              [iconName]="'music_note'"
+              [iconColor]="'#fff'"
+              [iconSize]="'2.4rem'"
+            ></app-icon>
           </span>
-          <span class="projekte-badge neu">Neu</span>
+          <span class="projekte-badge demnachst">Demnächst</span>
         </div>
         <div class="projekte-card-body">
-          <h3 class="projekte-card-title">Neues E-Piano für den Sankt-Andreas-Chor</h3>
+          <h3 class="projekte-card-title">
+            Digital unterstützt - die Chorleiterin profitiert vom iPad
+          </h3>
           <p class="projekte-card-description">
-            Mit Unterstützung unserer Förderer konnte ein neues E-Piano angeschafft werden, das die
-            Proben und Auftritte des Chors bereichert.
+            Die Neusser Familienzentrum GWS gGmbH wird den St. Andreas-Chor durch ein iPad für die
+            Chorleiterin fördern. Damit werden Proben einfacher, Noten digital organisiert und
+            musikalische Ideen direkt umgesetzt.
           </p>
         </div>
       </div>
@@ -211,7 +218,7 @@
         <div class="projekte-card-left">
           <span class="projekte-icon-container blue">
             <app-icon
-              [iconName]="'calendar_month'"
+              [iconName]="'location_on'"
               [iconColor]="'#fff'"
               [iconSize]="'2.4rem'"
             ></app-icon>
@@ -219,17 +226,39 @@
           <span class="projekte-badge demnachst">Demnächst</span>
         </div>
         <div class="projekte-card-body">
-          <h3 class="projekte-card-title">Neujahrskonzert 2026</h3>
+          <h3 class="projekte-card-title">Die Idee eines neuen Ortes für Musik entsteht</h3>
           <p class="projekte-card-description">
-            Das traditionelle Neujahrskonzert bringt auch 2026 Musikbegeisterte zusammen. Freuen Sie
-            sich auf ein abwechslungsreiches Programm.
+            Gemeinsam mit der katholischen Kirche im Neusser Sendungsraum entwickelt sich die Idee
+            eines neuen Projekts: das „Chor Haus" unter der Leitung von Herrn Michael Landsky.
           </p>
         </div>
       </div>
+
+      @if (showAllProjekte()) {
+        <div class="projekte-card">
+          <div class="projekte-card-left">
+            <span class="projekte-icon-container orange">
+              <app-icon
+                [iconName]="'celebration'"
+                [iconColor]="'#fff'"
+                [iconSize]="'2.4rem'"
+              ></app-icon>
+            </span>
+            <span class="projekte-badge neu">Erfolgreich abgeschlossen</span>
+          </div>
+          <div class="projekte-card-body">
+            <h3 class="projekte-card-title">Förderung des Neujahrskonzerts 2026</h3>
+            <p class="projekte-card-description">
+              Das Neujahrskonzert 2026 am 01.02.2026 wurde durch das Neusser Familienzentrum GWS
+              gGmbH unterstützt — Finanzierung des Bläserensembles und der Konzertplakate.
+            </p>
+          </div>
+        </div>
+      }
     </div>
 
     <button class="projekte-button" (click)="handleProjekteClick()">
-      Alle Projekte ansehen
+      {{ showAllProjekte() ? 'Weniger anzeigen' : 'Alle Projekte ansehen' }}
       <app-icon
         [iconName]="'arrow_right_alt'"
         [iconColor]="'#fff'"
