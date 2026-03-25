@@ -49,7 +49,9 @@ export class App {
 
     if (dialogRef) {
       dialogRef.afterClosed().subscribe((element) => {
-        this.scrollToElementByButton(element);
+        if (element && element !== 'impressum' && element !== 'datenschutz') {
+          this.scrollToElementByButton(element);
+        }
       });
     }
   }
